@@ -1,0 +1,19 @@
+{
+  "name": "oc-projet4-david",
+  "version": "1.0.0",
+  "description": "oc-projet4-david, Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/david-backup/oc-projet4-david.git"
+  },
+  "author": "David.C",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

@@ -1,0 +1,25 @@
+//boutton gradient violet général
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+//régles pour les bouttons homepage et pages menu + hover
+.btn__gradient {
+    color: $secondary_color;
+    background-image: linear-gradient($button500_color, $button_color);
+    cursor: pointer;
+    border: none;
+    display: block;
+    transition: all 300ms ease-in-out;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 1;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    
+
+    &:hover {
+        opacity: 0.85;
+        box-shadow: 1px 2px 12px 1px darken($primary500_color, 17%);
+    }
+}

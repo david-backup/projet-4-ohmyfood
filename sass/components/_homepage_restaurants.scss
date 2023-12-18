@@ -1,0 +1,50 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+//style de la section restaurants de homepage
+.restaurants {
+    padding: 30px 18px 50px;
+    background-color: $primary_color;
+
+    @media screen and (min-width: 1024px) {   
+        padding: 30px 18px 10px;
+    }
+
+    & h2 {
+        @include homepage_h2;
+            margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {   
+            text-align: center;
+        }
+        @media screen and (min-width: 1024px) {   
+            max-width: 1024px;
+            text-align: left;
+            margin: 0 auto 20px;
+        }
+    }
+    .cards__content {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        justify-content: center;
+
+        @media screen and (min-width: 1024px) {   
+            max-width: 1024px;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        
+        & a {
+            
+             @media screen and (min-width: 1024px) {   
+                max-width: 470px;
+                width: 100%;
+            }
+        }
+    }
+}

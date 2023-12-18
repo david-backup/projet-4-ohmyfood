@@ -1,0 +1,23 @@
+@import "./base/settings";
+@import "./base/typography";
+@import "./base/animations";
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./components/header";
+@import "./components/homepage_location";
+@import "./components/homepage_research";
+@import "./components/homepage_fonctioning";
+@import "./components/homepage_restaurants";
+@import "./components/homepage.cards";
+@import "./components/menu_container";
+@import "./components/menu_title";
+@import "./components/menu_card";
+@import "./components/menu_config_btn";
+@import "./components/buttons";
+@import "./components/footer";
+
+@import "./layout/layout";
+
+@import "./vendors/net_settings.scss";

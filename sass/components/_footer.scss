@@ -1,0 +1,76 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+//style du footer pour homepage et pages menu
+footer {
+    padding: 22px 25px;
+    background-color: $primary900_color;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        gap: 40px;
+        padding: 52px 50px 30px 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        gap: 70px;
+    }
+    
+    //image footer
+    .footer__logo {
+        width: 139px;
+        color: $secondary_color;
+        margin-bottom: 22px;
+        display: block;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: -2px;
+            transform: scale(0.6);
+        }
+        @media screen and (min-width: 1024px) {
+            transform: scale(0.7);
+        }
+    }
+
+    //liens du footer
+    .footer__links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        @media screen and (min-width: 768px) {
+           flex-direction: row;
+           font-size: 0.8rem;
+           gap: 15px; 
+        }
+        @media screen and (min-width: 1024px) {
+            gap: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        & a {
+            color: $secondary_color;
+            font-weight: 400;
+
+            &:nth-child(3) {
+                font-weight: 300;
+
+                @media screen and (min-width: 768px) {
+                    margin-left: 25px;
+                }
+            }
+            &:nth-child(4) {
+                font-weight: 300;
+            }
+
+            & i {
+                width: 20px;
+                height: 16px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+//images des pages menu
+
+.menu_img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 1440px;
+    height: 275px;
+    margin-bottom: -40px;
+    z-index: -1;
+    position: relative;
+    transition: all 500ms ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        height: 330px;
+    }
+    @media screen and (min-width: 1024px) {
+        height: 425px;
+    }
+}

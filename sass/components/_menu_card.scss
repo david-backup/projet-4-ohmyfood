@@ -1,0 +1,79 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+//style du conteneur des cards sur pages menu
+.card__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+
+  .title__card {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      background-color: $accent_color;
+      width: 42px;
+      height: 4px;
+    }
+  }
+
+  //style des cards sur pages menu
+  .menu__card {
+    max-width: 634px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $secondary_color;
+    border-radius: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    
+    .menu__items {
+      display: flex;
+      cursor: pointer;
+
+      &:hover .menu__check {
+        width: 65px;
+      }
+
+      .menu__text {
+        padding: 15px 5px 15px 15px;
+        overflow: hidden;
+  
+        & h3 {
+          font-size: 1.12rem;
+          font-weight: 500;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-bottom: 5px;
+        }
+        & p {
+          font-size: 0.95rem;
+          font-weight: 300;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .menu__price {
+        font-size: 0.95rem;
+        color: $primary900_color;
+        font-weight: 600;
+        margin-left: auto;
+        padding: 15px 15px 15px 5px;
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}

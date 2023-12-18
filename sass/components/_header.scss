@@ -1,0 +1,35 @@
+// header homepage
+@import "../utils/variables";
+
+
+//header pour homepage et les pages menu
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    box-shadow: 0px 0px 6px 2px darken($primary500_color, 15%);
+    transition: all 150ms ease-in-out;
+    position: relative;
+    
+    //image du header
+    .logo {
+        color: $third_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+        width: 100%;
+    }
+
+    //icone sur le header des pages menu
+    & i {
+        color: $primary900_color;
+        font-size: 20px;
+        padding-left: 25px;
+    }
+    @media screen and (min-width: 1440px) {
+        box-shadow: none;
+    }
+
+}

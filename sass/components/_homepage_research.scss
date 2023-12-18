@@ -1,0 +1,38 @@
+//section research
+@import "../utils/variables";
+
+
+//style de la section research sur homepage
+.research {
+  text-align: center;
+  padding: 40px 35px;
+  background-color: $primary_color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 25px;
+
+  & h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: all 500ms ease-in-out;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  & p {
+    color: $primary900_color;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+
+  .btn__home {
+    padding: 15px 22px;
+  }
+}

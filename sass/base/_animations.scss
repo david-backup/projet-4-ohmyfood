@@ -1,0 +1,206 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+//loader sur homepage
+.loader__home {
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: loader 2s ease-in-out;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  @keyframes loader {
+    0% {
+      background-color: rgba(53, 53, 53, 1);
+      backdrop-filter: blur(7px);
+      display: block;
+    }
+
+    100% {
+      background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(2px);
+      display: none;
+    }
+  }
+
+  //titre du loader et son style
+  & h2 {
+    @include title-font;
+    color: $secondary_color;
+    font-size: 2.7rem;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    font-weight: 400;
+    margin: 43vh auto 0;
+    background: linear-gradient($button500_color, $button_color);
+    width: 340px;
+    max-width: 100%;
+    border-radius: 40%;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7);
+    
+  }
+
+  //span cercle animation du loader
+  & span {
+    border: 8px solid $secondary_color;
+    border-top: 8px solid $button_color;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    display: block;
+    margin: 60px auto 20px;
+    position: relative;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  //texte loading... du loader
+  & p {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $secondary_color;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+}
+
+
+//animation pages menu, arrivée du titre, entrées, plats et desserts
+
+.menu__title {
+  animation: menu__title 1000ms forwards;
+  opacity: 0;
+  animation-delay: 250ms;
+
+  @keyframes menu__title {
+    0% {
+      transform: translateX(-50%) scale(1.3);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.entries {
+  animation: entries 1500ms ease forwards;
+  opacity: 0;
+  animation-delay: 700ms;
+
+  @keyframes entries {
+    0% {
+      transform: translateX(-25%) scale(1.2);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.dishes {
+  animation: dishes 1500ms forwards;
+  opacity: 0;
+  animation-delay: 1400ms;
+
+  @keyframes dishes {
+    0% {
+      transform: translateX(-25%) scale(1.2);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.desserts {
+  animation: desserts 1500ms forwards;
+  opacity: 0;
+  animation-delay: 2100ms;
+
+  @keyframes desserts {
+    0% {
+      transform: translateX(-25%) scale(1.2);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+//animation rectangle vert de validation (sur les cards des menu)
+.menu__check {
+  width: 0;
+  background-color: $accent_color;
+  border-radius: 0px 16px 16px 0px;
+  transition: width 500ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  .fa-circle-check {
+    color: $secondary_color;
+    transform: scale(1.4);
+  }
+}
+
+// animation des coeurs sur homepage
+.card__icon {
+  .fa-solid {
+    color: transparent;
+    background-image: linear-gradient($button_color, $button500_color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+  }
+
+  &:hover .fa-solid {
+    opacity: 1;
+  }
+  &:hover .fa-regular {
+    opacity: 0;
+  }
+}
+
+//animation des coeurs sur menu
+.menu__icon {
+  .fa-solid {
+    color: transparent;
+    background-image: linear-gradient($button_color, $button500_color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+  }
+
+  &:hover .fa-solid {
+    opacity: 1;
+  }
+  &:hover .fa-regular {
+    opacity: 0;
+  }
+}

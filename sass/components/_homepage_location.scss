@@ -1,0 +1,15 @@
+//div class location homepage
+@import "../utils/variables";
+
+
+//style de la div .location sur homepage
+.location {
+    height: 50px;
+    color: $primary900_color;
+    background-color: $primary500_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    font-weight: 600;
+}

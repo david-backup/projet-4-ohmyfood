@@ -1,0 +1,20 @@
+@import "../utils/variables";
+
+//mixins fonts roboto 
+@mixin text_font {
+    font-family: 'Roboto', sans-serif;
+}
+
+//mixins fonts shrikhand
+@mixin title_font {
+    font-family: 'Shrikhand', serif;
+} 
+
+
+//mixins titres h2 de la homepage
+@mixin homepage_h2 {
+    @include text_font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $third500_color;
+}

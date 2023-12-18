@@ -1,0 +1,30 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+//style des titres h1 et des coeurs sur pages menu
+.menu__title {
+  max-width: 341px;
+  width: 100%;
+  position: relative;
+
+  & h1 {
+    @include title_font;
+    color: $third_color;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .fa-regular,
+  .fa-solid {
+    width: 32px;
+    font-size: 1.7rem;
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    cursor: pointer;
+    text-align: center;
+  }
+  & i {
+    transition: all 350ms ease-in-out;
+  }
+}

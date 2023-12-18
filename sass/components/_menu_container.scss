@@ -1,0 +1,27 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+//style du container principale des pages menu
+.menu__container {
+    background-color: $primary_color;
+    padding: 35px 15px 40px;
+    border-radius: 40px 40px 0 0;
+    max-width: 1055px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    @media screen and (min-width: 1024px) {
+        padding: 55px 15px 40px;
+    }
+
+    .entries,
+    .dishes,
+    .desserts {
+        max-width: 634px;
+        width: 100%;
+    }
+}
